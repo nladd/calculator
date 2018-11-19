@@ -1,0 +1,25 @@
+Name,Management Company,Ticker,Clean Share - Service Fee Arrangement,Morningstar Category,Fund Size Base Currency,Net Assets - Share Class Base Currency,Annual Report Net Expense Ratio,Prospectus Net Expense Ratio,Management Fee,12b-1 Fee,Accounting Fee,Administrator Fee,Advisor Fee,Auditor Fee,Board of Directors Fee,Custodian Fee,Distribution Fee,Transfer Agency Fee
+First Eagle Global R3,"First Eagle Investment Mgt, LLC",EARGX,Bundled,US Fund World Allocation,"54,635,376,136.00","49,748.00",,1.29,0.75,0.35,,,,,,,,
+First Eagle Global I,"First Eagle Investment Mgt, LLC",SGIIX,Semi-bundled,US Fund World Allocation,"54,635,376,136.00","31,031,506,689.00",0.84,0.84,0.75,,,0.00,0.75,,0.00,0.01,,0.07
+First Eagle Global R6,"First Eagle Investment Mgt, LLC",FEGRX,Unbundled,US Fund World Allocation,"54,635,376,136.00","1,048,263,459.00",0.78,0.78,0.75,,,0.00,0.75,,0.00,0.01,,0.07
+First Eagle Global R4,"First Eagle Investment Mgt, LLC",EAGRX,Bundled,US Fund World Allocation,"54,635,376,136.00","128,260.00",,1.04,0.75,0.10,,,,,,,,
+MFS® Value I,MFS Investment Management,MEIIX,Semi-bundled,US Fund Large Value,"48,446,924,370.00","20,618,608,308.00",0.59,0.59,0.47,,,0.00,0.49,0.00,0.00,0.00,,0.09
+MFS® Value R1,MFS Investment Management,MEIGX,Bundled,US Fund Large Value,"48,446,924,370.00","24,700,864.00",1.59,1.59,0.47,1.00,,0.00,0.49,0.00,0.00,0.00,1.00,0.09
+MFS® Value R3,MFS Investment Management,MEIHX,Bundled,US Fund Large Value,"48,446,924,370.00","2,260,552,586.00",0.84,0.84,0.47,0.25,,0.00,0.49,0.00,0.00,0.00,0.25,0.09
+MFS® Value R6,MFS Investment Management,MEIKX,Semi-bundled,US Fund Large Value,"48,446,924,370.00","13,872,022,217.00",0.49,0.49,0.47,,,0.00,0.49,0.00,0.00,0.00,,0.09
+MFS® Value R4,MFS Investment Management,MEIJX,Semi-bundled,US Fund Large Value,"48,446,924,370.00","3,203,411,349.00",0.59,0.59,0.47,,,0.00,0.49,0.00,0.00,0.00,,0.09
+MFS® Value R2,MFS Investment Management,MVRRX,Bundled,US Fund Large Value,"48,446,924,370.00","552,136,680.00",1.09,1.09,0.47,0.50,,0.00,0.49,0.00,0.00,0.00,0.50,0.09
+JPMorgan Core Bond R6,JPMorgan Asset Management Inc,JCBUX,Unbundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","18,952,417,438.00",0.35,0.35,0.30,,,0.08,0.30,,0.00,0.00,,0.00
+JPMorgan Core Bond R2,JPMorgan Asset Management Inc,JCBZX,Bundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","98,216,010.00",1.06,1.10,0.30,0.50,,0.08,0.30,,0.00,0.00,0.75,0.05
+JPMorgan Core Bond R5,JPMorgan Asset Management Inc,JCBRX,Bundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","381,609,356.00",0.45,0.45,0.30,,,0.08,0.30,,0.00,0.00,0.10,0.01
+JPMorgan Core Bond R4,JPMorgan Asset Management Inc,JCBQX,Bundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","5,929,422.00",0.59,0.60,0.30,,,0.08,0.30,,0.00,0.00,0.18,
+JPMorgan Core Bond R3,JPMorgan Asset Management Inc,JCBPX,Bundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","4,320,590.00",0.50,0.85,0.30,0.25,,0.08,0.30,,0.00,0.00,0.53,0.04
+JPMorgan Core Bond I,JPMorgan Asset Management Inc,WOBDX,Bundled,US Fund Intermediate-Term Bond,"28,953,668,878.00","7,162,487,261.00",0.50,0.50,0.30,,,0.08,0.30,,0.00,0.00,0.25,0.01
+JHancock Disciplined Value R1,Boston Partners,JDVOX,Bundled,US Fund Large Value,"15,945,561,487.00","21,191,706.00",1.45,1.45,0.66,0.50,0.02,,0.66,,0.00,0.01,0.75,0.01
+JHancock Disciplined Value R4,Boston Partners,JDVFX,Bundled,US Fund Large Value,"15,945,561,487.00","217,056,578.00",0.95,0.95,0.66,0.25,0.02,,0.66,,0.00,0.01,0.35,0.01
+JHancock Disciplined Value R6,Boston Partners,JDVWX,Unbundled,US Fund Large Value,"15,945,561,487.00","4,926,951,015.00",0.70,0.70,0.66,0.00,0.02,,0.66,,0.00,0.01,,0.01
+JHancock Disciplined Value I2,Boston Partners,JVLTX,Semi-bundled,US Fund Large Value,"15,945,561,487.00","51,601,901.00",0.80,0.80,0.66,0.00,0.02,,0.66,,0.00,0.01,,0.11
+JHancock Disciplined Value R2,Boston Partners,JDVPX,Bundled,US Fund Large Value,"15,945,561,487.00","130,771,037.00",1.20,1.20,0.66,0.25,0.02,,0.66,,0.00,0.01,0.50,0.01
+JHancock Disciplined Value R3,Boston Partners,JDVHX,Bundled,US Fund Large Value,"15,945,561,487.00","16,407,716.00",1.34,1.35,0.66,0.50,0.02,,0.66,,0.00,0.01,0.64,0.01
+JHancock Disciplined Value R5,Boston Partners,JDVVX,Bundled,US Fund Large Value,"15,945,561,487.00","200,281,056.00",0.75,0.75,0.66,0.00,0.02,,0.66,,0.00,0.01,0.05,0.01
+JHancock Disciplined Value I,Boston Partners,JVLIX,Semi-bundled,US Fund Large Value,"15,945,561,487.00","7,631,503,986.00",0.80,0.80,0.66,0.00,0.02,,0.66,,0.00,0.01,,0.11

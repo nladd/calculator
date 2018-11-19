@@ -1,0 +1,23 @@
+version: '3.0'
+services:
+  entrustody:
+    build:
+      context: ../.
+      dockerfile: docker_files/dockerfile
+    image: entrustody:latest
+    container_name: entrustody
+    command: /scripts/bundle_and_start.sh
+    ports:
+      - '3000:3000'
+      - '3001:3001'
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../.:/apps/entrustody
+      - entrustody_gems:/gem/
+      - ./container_env/pryrc.txt:/root/.pryrc
+      - ./container_env/bash.profile:/root/.bashrc
+      - ../scripts:/scripts
+volumes:
+  entrustody_gems:
+  ollyolly_dev_db:

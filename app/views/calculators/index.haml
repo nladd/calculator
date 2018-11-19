@@ -1,0 +1,26 @@
+
+.grid-x
+  .cell.small-2
+  .cell.small-8
+    = form_with url: calculate_path, local: true do |f|
+      = label_tag 'fund_name', 'Mutual Fund:'
+      = text_field_tag 'fund_name', nil, placeholder: 'Fund name', id: 'fund_name'
+
+      = label_tag :aum, 'Assets Under Management:'
+      = text_field_tag :aum, nil, placeholder: 'Assets Under Management'
+
+      = label_tag :cash, 'Cash balance:'
+      = text_field_tag :cash, nil, placeholder: 'Cash balance'
+
+      = label_tag :num_accounts, 'Number of accounts:'
+      = text_field_tag :num_accounts, nil, placeholder: 'Number of accounts'
+
+      = submit_tag 'Calculate'
+
+  .cell.small-2
+
+:javascript
+  $('#fund_name').autocomplete({
+    source: #{@funds.keys.to_s.html_safe},
+    classes: {'ui-autocomplete': 'no-bullet'}
+    });

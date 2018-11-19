@@ -1,0 +1,59 @@
+- (Funds::SHARE_CLASSES - [Funds::SHARE_CLASS_R6]).each do |share_class|
+  - next unless @fund[share_class]
+  .grid-x
+    .cell.small-2
+    .cell.small-8
+      %h3
+        = "#{@fund_name} #{share_class}"
+      .grid-x
+        .cell.small-4
+          %p
+            Expense Ratio:
+            %br
+            = number_to_percentage(@fund[share_class][:exp_ratio], precision: 4)
+        .cell.small-4
+          %p
+            Premium to R6 share:
+            %br
+            = number_to_percentage((@fund[share_class][:exp_ratio] / @fund[Funds::SHARE_CLASS_R6][:exp_ratio] - 1) * 100, precision: 2)
+        .cell.small-4
+          %p
+            Cost:
+            %br
+            = number_to_currency(@aum * @fund[share_class][:exp_ratio])
+
+.grid-x
+  .cell.small-2
+  .cell.small-8
+    %h3
+      = "#{@fund_name} #{Funds::SHARE_CLASS_R6}"
+    .grid-x
+      .cell.small-2
+        %p
+          Expense Ratio:
+          %br
+          = number_to_percentage(@fund[Funds::SHARE_CLASS_R6][:exp_ratio], precision: 4)
+      .cell.small-2
+        %p
+          Cost:
+          %br
+          = number_to_currency(@aum * @fund[Funds::SHARE_CLASS_R6][:exp_ratio])
+      .cell.small-2
+        %p
+          Platform fee:
+          %br
+          = number_to_currency(@num_accounts * 15)
+          %br
+          (based on
+          = @num_accounts
+          accounts)
+      .cell.small-2
+        %p
+          Earned interest on cash balance:
+          %br
+          = number_to_currency(@cash * 0.02)
+      .cell.small-2
+        %p
+          Total cost:
+          %br
+          = number_to_currency(@aum * @fund[Funds::SHARE_CLASS_R6][:exp_ratio] + @num_accounts * 15 - @cash * 0.02)
