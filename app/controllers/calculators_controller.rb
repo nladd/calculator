@@ -13,6 +13,8 @@ class CalculatorsController < ApplicationController
     @aum = params[:aum].to_f
     @num_accounts = params[:num_accounts].to_i
     @cash = params[:cash].to_f
+    @num_trades_per_year = params[:num_trades_per_year].to_f
+    @cost_per_trade = params[:cost_per_trade].to_f
 
     render :show
   end

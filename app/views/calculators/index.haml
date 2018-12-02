@@ -6,14 +6,25 @@
       = label_tag 'fund_name', 'Mutual Fund:'
       = text_field_tag 'fund_name', nil, placeholder: 'Fund name', id: 'fund_name'
 
-      = label_tag :aum, 'Assets Under Management:'
+      = label_tag :aum, 'Assets Under Management (in dollars):'
       = text_field_tag :aum, nil, placeholder: 'Assets Under Management'
 
-      = label_tag :cash, 'Cash balance:'
+      = label_tag :mutual_fund_percentage, 'Percent of AUM in mutual funds:'
+      = text_field_tag :mutual_fund_percentage, nil, placeholder: '% of AUM in mutual funds'
+
+      = label_tag :cash, 'Cash balance (in dollars):'
       = text_field_tag :cash, nil, placeholder: 'Cash balance'
 
       = label_tag :num_accounts, 'Number of accounts:'
       = text_field_tag :num_accounts, nil, placeholder: 'Number of accounts'
+
+      %h5 Trading costs
+      %p.help-text Leave blank if no costs to trade
+      = label_tag :num_trades_per_year, 'Number of Trades Per Year:'
+      = text_field_tag :num_trades_per_year, nil, placeholder: 'Number of trades per year'
+
+      = label_tag :cost_per_trade, 'Cost per trade:'
+      = text_field_tag :cost_per_trade, nil, placeholder: 'Cost per trade'
 
       = submit_tag 'Calculate'
 

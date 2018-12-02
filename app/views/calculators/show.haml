@@ -1,59 +1,72 @@
-- (Funds::SHARE_CLASSES - [Funds::SHARE_CLASS_R6]).each do |share_class|
-  - next unless @fund[share_class]
-  .grid-x
-    .cell.small-2
-    .cell.small-8
-      %h3
-        = "#{@fund_name} #{share_class}"
-      .grid-x
-        .cell.small-4
-          %p
-            Expense Ratio:
-            %br
-            = number_to_percentage(@fund[share_class][:exp_ratio], precision: 4)
-        .cell.small-4
-          %p
-            Premium to R6 share:
-            %br
-            = number_to_percentage((@fund[share_class][:exp_ratio] / @fund[Funds::SHARE_CLASS_R6][:exp_ratio] - 1) * 100, precision: 2)
-        .cell.small-4
-          %p
-            Cost:
-            %br
-            = number_to_currency(@aum * @fund[share_class][:exp_ratio])
-
 .grid-x
-  .cell.small-2
-  .cell.small-8
-    %h3
-      = "#{@fund_name} #{Funds::SHARE_CLASS_R6}"
-    .grid-x
-      .cell.small-2
+  .cell-2
+    .grid-y
+      .cell.small-1
+      .cell.small-10{style: 'border: 1px solid black; padding: 5px;'}
+        %h3
+          = "#{@fund_name} #{Funds::SHARE_CLASS_R6}"
         %p
-          Expense Ratio:
+          Transparent Fees Paid to
           %br
-          = number_to_percentage(@fund[Funds::SHARE_CLASS_R6][:exp_ratio], precision: 4)
-      .cell.small-2
-        %p
-          Cost:
-          %br
-          = number_to_currency(@aum * @fund[Funds::SHARE_CLASS_R6][:exp_ratio])
-      .cell.small-2
-        %p
-          Platform fee:
-          %br
-          = number_to_currency(@num_accounts * 15)
-          %br
-          (based on
-          = @num_accounts
-          accounts)
-      .cell.small-2
-        %p
-          Earned interest on cash balance:
-          %br
-          = number_to_currency(@cash * 0.02)
-      .cell.small-2
-        %p
-          Total cost:
-          %br
-          = number_to_currency(@aum * @fund[Funds::SHARE_CLASS_R6][:exp_ratio] + @num_accounts * 15 - @cash * 0.02)
+          New Platform - Entrustody:
+        .grid-y
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Expense Ratio:
+              %br
+              = number_to_percentage(@fund[Funds::SHARE_CLASS_R6][:exp_ratio], precision: 4)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Trading Costs
+              %br
+              - trading_costs = @num_accounts * @num_trades_per_year * 0.5
+              = number_to_currency(trading_costs)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Single Platform Fee:
+              %br
+              - platform_fee = @num_accounts * 15
+              = number_to_currency(platform_fee)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Total cost on new platform:
+              %br
+              %span{style: "background-color: yellow;"}
+                = number_to_currency((@aum - @cash) * @fund[Funds::SHARE_CLASS_R6][:exp_ratio] + platform_fee + trading_costs)
+
+  - (Funds::SHARE_CLASSES - [Funds::SHARE_CLASS_R6]).each do |share_class|
+    - next unless @fund[share_class]
+    .cell-2
+      .grid-y
+        .cell.small-1
+        .cell.small-10{style: 'border: 1px solid black; padding: 5px;'}
+          %h3
+            = "#{@fund_name} #{share_class}"
+          %p
+            Extimated Current Fees Being Paid
+            %br
+            to Custudian/Broker Dealer
+          .grid-y
+            .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+              %p
+                Expense Ratio:
+                %br
+                = number_to_percentage(@fund[share_class][:exp_ratio], precision: 4)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Trading Costs
+              %br
+              - trading_costs = @num_accounts * @num_trades_per_year * @cost_per_trade
+              = number_to_currency(trading_costs)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Cash Spread Cost (Opportunity cost)
+              %br
+              - opp_cost = @cash * 0.02
+              = number_to_currency(opp_cost)
+          .cell.small-2{style: 'border-top: 1px solid black; border-bottom: 1px solid black;'}
+            %p
+              Total cost of current platform:
+              %br
+              %span{style: "background-color: yellow;"}
+                = number_to_currency((@aum - @cash) * @fund[share_class][:exp_ratio] + trading_costs + opp_cost)
